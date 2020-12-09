@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	./_autosetup
+	./configure --disable-server --disable-client --disable-manager
+
+override_dh_auto_build:
+	make svn_version.h && cd lib && make && cd ../samples/condor && make
+
+override_dh_auto_install:
+	mkdir -p debian/condor-boinc/usr/sbin
+	cp -p samples/condor/boinc_gahp debian/condor-boinc/usr/sbin

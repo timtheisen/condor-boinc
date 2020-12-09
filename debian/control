@@ -1,0 +1,23 @@
+Source: condor-boinc
+Section: science
+Priority: optional
+Maintainer: Tim Theisen <tim@cs.wisc.edu>
+Build-Depends: debhelper (>=9),
+               autoconf,
+               automake,
+               libcurl4-openssl-dev,
+               m4,
+               libtool
+Standards-Version: 3.9.8
+Homepage: https://boinc.berkeley.edu/
+# git archive --output condor-boinc_client_release-7.16.14.orig.tar.gz --prefix condor-boinc-7.16.14/ client_release/7.16/7.16.14
+
+
+Package: condor-boinc
+Architecture: any
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: BOINC GAHP for HTCondor
+ The Grid ASCII Helper Protocol for the
+ Berkeley Open Infrastructure for Network Computing
+ for HTCondor job submission
