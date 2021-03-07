@@ -11,7 +11,7 @@ Build-Depends: debhelper (>=9),
                pkg-config
 Standards-Version: 3.9.8
 Homepage: https://boinc.berkeley.edu/
-# git archive --output condor-boinc_client_release-7.16.14.orig.tar.gz --prefix condor-boinc-7.16.14/ client_release/7.16/7.16.14
+# git archive --output condor-boinc_7.16.16.orig.tar.gz --prefix condor-boinc-7.16.16/ client_release/7.16/7.16.16
 
 
 Package: condor-boinc

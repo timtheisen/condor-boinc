@@ -1,13 +1,13 @@
 Name:		condor-boinc
-Version:	7.16.11
+Version:	7.16.16
 Release:	1%{?dist}
 Summary:	HTCondor BOINC GAHP
 
 License:	LGPLv3+
 URL:		https://boinc.berkeley.edu/
 
-# git archive --output boinc-client_release-7.16-7.16.11.tar.gz --prefix client_release-7.16-7.16.11/ client_release/7.16/7.16.11
-Source0:	boinc-client_release-7.16-7.16.11.tar.gz
+# git archive --output condor-boinc_7.16.16.orig.tar.gz --prefix condor-boinc-7.16.16/ client_release/7.16/7.16.16
+Source0:	condor-boinc_7.16.16.orig.tar.gz
 
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -21,7 +21,7 @@ BuildRequires:	libtool
 The BOINC GAHP for HTCondor
 
 %prep
-%setup -n client_release-7.16-7.16.11
+%setup -n condor-boinc-7.16.16
 
 
 %build
@@ -40,6 +40,9 @@ cp -p samples/condor/boinc_gahp %{buildroot}/usr/sbin
 
 
 %changelog
+* Mon Feb 22 2021 Tim Theisen <tim@cs.wisc.edu> - 7.16.16-1
+- Update to upstream version 7.16.16
+
 * Tue Sep 22 2020 Tim Theisen <tim@cs.wisc.edu> - 7.16.11-1
 - Initial version
 
